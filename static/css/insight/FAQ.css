@@ -1,0 +1,292 @@
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e9ef;
+    line-height: 76px;
+    height: 76px;
+    overflow: hidden;
+    display: block;
+}
+
+header {
+    padding-top: 18px;
+    padding-bottom: 30px;
+    position: relative;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+header .guide-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.guide-wrapper {
+    width: 940px;
+    max-width: 940px;
+    margin: 0 auto;
+    display: block;
+}
+
+.guide-header-main {
+    min-height: 38px;
+    margin-bottom: 26px;
+    position: relative;
+    z-index: 20;
+}
+
+.guide-header-main-logo {
+    float: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.guide-header-main-actions {
+    float: right;
+}
+
+.guide-header-main-actions-websites {
+    background-color: #ffffff33;
+    color: #fff;
+    font-size: 13.5px;
+    padding: 0 22px;
+    line-height: 37px;
+    letter-spacing: .25px;
+    vertical-align: middle;
+    height: 38px;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+.guide-header-main-actions-websites-itself {
+    /* font-family: "Crisp Graphik Regular", sans-serif; */
+    font-weight: 400 !important;
+}
+
+.guide-header-search {
+    margin: 0 auto;
+    width: 600px;
+    display: block;
+    position: relative;
+    border-radius: 4px;
+}
+
+.guide-header-search:before {
+    content: "";
+    background-color: #fff;
+    --mask-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjIyIiB2aWV3Qm94PSIwIDAgMjIgMjIiIHdpZHRoPSIyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTUuNzIzIDEzLjgzNmgtLjk5M2wtLjM1My0uMzRhOC4xNCA4LjE0IDAgMCAwIDEuOTc1LTUuMzJDMTYuMzUyIDMuNjYgMTIuNjkyIDAgOC4xNzYgMFMwIDMuNjYgMCA4LjE3NnMzLjY2IDguMTc2IDguMTc2IDguMTc2YTguMTQgOC4xNCAwIDAgMCA1LjMyLTEuOTc1bC4zNC4zNTN2Ljk5M0wyMC4xMjYgMjIgMjIgMjAuMTI2em0tNy41NDcgMGMtMy4xMzIgMC01LjY2LTIuNTI4LTUuNjYtNS42NnMyLjUyOC01LjY2IDUuNjYtNS42NiA1LjY2IDIuNTI4IDUuNjYgNS42Ni0yLjUyOCA1LjY2LTUuNjYgNS42NnoiLz48L3N2Zz4=);
+    mask-image: var(--mask-image);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    left: 36px;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.guide-header-search-field {
+    border-radius: 8px;
+    display: block;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .04);
+}
+
+.guide-header-search-input {
+    border-radius: 8px;
+    white-space: pre;
+    padding: 0 64px;
+    height: 62px;
+    line-height: 62px;
+    font-size: 15.75px;
+    letter-spacing: -.1px;
+    background-color: #ffffff40;
+    border: 0 none;
+    width: 100%;
+}
+
+.guide-font-sans-regular {
+    font-family: "Crisp Graphik Regular", sans-serif;
+    font-weight: 400 !important;
+}
+
+.guide-font-sans-medium {
+    font-family: "Crisp Graphik Medium", sans-serif;
+    font-weight: 700 !important;
+}
+
+.guide-header-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.guide-header-background {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+    background-color: #000000;
+}
+
+.guide-header-background:before {
+
+}
+
+.guide-header-background-banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 0;
+}
+
+header:after {
+    content: "";
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .08) 100%);
+    height: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.guide-navigation-wrap {
+    display: flex;
+    height: 100%;
+}
+
+.guide-navigation-back {
+    color: #1c293b;
+    font-size: 15.3px;
+    letter-spacing: .25px;
+    margin-top: -2px;
+    flex: .1;
+}
+
+.guide-navigation-back:before {
+    content: "";
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgMTggMTQiIHdpZHRoPSIxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNi42NTcgMEM2LjQgMCA2LjE0NS4xIDUuOTUuMjk1TC4yOTMgNS45NWEuOTk5Ljk5OSAwIDAgMCAwIDEuNDE0bDUuNjU3IDUuNjU3YS45OTkuOTk5IDAgMCAwIDEuNDE0IDBsLjA4Ni0uMDg2YS45OTkuOTk5IDAgMCAwIDAtMS40MTRMMy41ODYgNy42NThoMTMuMDdhMSAxIDAgMCAwIDAtMkgzLjU4Nkw3LjQ1IDEuNzk1YS45OTkuOTk5IDAgMCAwIDAtMS40MTRMNy4zNjQuMjk1QS45OTguOTk4IDAgMCAwIDYuNjU3IDB6IiBmaWxsPSIjMWMyOTNiIi8+PC9zdmc+);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 11px;
+    margin-top: -2px;
+    margin-right: 7px;
+}
+
+.guide-navigation-title {
+    text-align: center;
+    padding: 0 12px;
+    flex: .8;
+    margin-top: -2px;
+} 
+
+.guide-navigation-title-list {
+    font-size: 14.85px;
+    text-align: right;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.guide-navigation-title-list-wrap {
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.guide-navigation-title-list-subject {
+    font-size: 14.85px;
+    text-align: right;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.guide-navigation-title-list-subject-label {
+    color: #1c293b;
+}
+
+.guide-category-badge {
+    vertical-align: middle;
+    margin-left: 12px;
+    margin-top: -2px;
+    background-color: #476da5;
+    font-size: 14.4px;
+    color: #fff;
+    letter-spacing: .25px;
+    line-height: 31px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 32px;
+    padding: 0 14px;
+    max-width: 160px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.guide-navigation-title-list-separator-wrap {
+    margin: 0 22px 0 26px;
+}
+
+.guide-navigation-title-list-separator {
+    background-color: #e5e9ef;
+    width: 1px;
+    height: 32px;
+    vertical-align: middle;
+    margin-top: -2px;
+    display: inline-block;
+}
+
+.guide-navigation-title-list-description-wrap {
+    text-align: left;
+}
+
+
+.guide-category-badge {
+    hyphens: auto;
+    overflow-wrap: break-word;
+ }
+
+ .guide-navigation-title-list-description {
+    color: #37516c;
+    font-size: 22.5px;
+    line-height: 20px;
+    vertical-align: middle;
+    overflow: hidden;
+    max-width: 300px;
+    max-height: 40px;
+    display: inline-block;
+ }
+
+ .guide-text-ellipsis-multiline {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    margin: 0;
+ }
+ 
+ .guide-text-ellipsis-multiline-lines-2 {
+    -webkit-line-clamp: 2;
+ }
