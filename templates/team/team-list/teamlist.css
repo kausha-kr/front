@@ -1185,13 +1185,28 @@ body > svg {
 }
 
 .category-body-input-wrap-container {
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
     min-height: 24px;
     padding-inline: 4px;
     flex: 1 0 0;
     display: flex;
+}
+
+.category-body-input-wrap .check-icon {
+    display: none;
+    color: #000000;
+}
+
+.category-body-input-wrap.active .check-icon {
+    display: flex;
+    align-items: center;
+}
+
+.category-body-input-wrap.active .category-body-item-text {
+    color: black;
+    font-weight: 600;
 }
 
 .category-body-item-text {
