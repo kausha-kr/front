@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>member-login</title>
     <link rel="stylesheet" href="../../static/css/member/font.css">
-    <!-- <link rel="stylesheet" href="../../static/css/member/reset.css"> -->
-    <!-- <link rel="stylesheet" href="../../static/css/member/base.css"> -->
-    <!-- <link rel="stylesheet" href="../../static/css/member/tokens.css"> -->
-    <!-- <link rel="stylesheet" href="../../static/css/member/recipes.css"> -->
-    <!-- <link rel="stylesheet" href="../../static/css/member/utils.css"> -->
-    <!-- <link rel="stylesheet" href="../../static/css/member/common.css"> -->
     <link rel="stylesheet" href="../../static/css/member/login.css">
 </head>
 <body>
@@ -45,13 +39,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="password-wrap">
+                                    <!-- 이메일이 있을 시: none class 제거 필요 -->
+                                    <div class="password-wrap none">
                                         <div class="password-inner">
                                             <div class="password-word">
                                                 <input placeholder="패스워드를 입력해주세요." class="passwordwrite" type="password">
                                             </div>
                                         </div>
                                     </div>
+                                    <!--  -->
                                     <div class="goingwrap">
                                         <button class="goingbutton" disabled> <!-- 활성화시 disabled를 빼주세요. -->
                                             <span class="goingword">계속하기</span> <!-- 이메일이 있을 시: 로그인하기 -->

@@ -175,6 +175,9 @@ svg {
     width: 100%;
     display: flex;
 }
+.password-wrap.none{
+    display: none;
+}
 
 .password-inner ,
 .email-inner {
