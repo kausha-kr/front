@@ -1134,9 +1134,8 @@ body > svg {
     flex: 1 0 0;
 }
 
-.category-body-wrap {
-    padding: 8px;
-    display: flex;
+.check-icon {
+    display: none; /* 처음에는 안 보이게 설정 */
 }
 
 .category-body-section {
@@ -1187,6 +1186,18 @@ body > svg {
     padding: 8px;
 }
 
+/* 박스가 active(클릭) 되었을 때의 스타일 */
+.category-body-input-wrap.active .check-icon {
+    display: flex;
+    align-items: center;
+    color: #000000; /* 검정색 체크 */
+}
+
+.category-body-input-wrap.active .category-body-item-text {
+    color: #121314;
+    font-weight: 600;
+}
+
 .category-body-input-wrap-container {
     justify-content: space-between;
     align-items: center;
@@ -1197,20 +1208,6 @@ body > svg {
     display: flex;
 }
 
-.category-body-input-wrap .check-icon.active {
-    display: block;
-    color: #000000;
-}
-
-.category-body-input-wrap.active .check-icon {
-    display: flex;
-    align-items: center;
-}
-
-.category-body-input-wrap.active .category-body-item-text {
-    color: black;
-    font-weight: 600;
-}
 
 .category-body-item-text {
     overflow: hidden;

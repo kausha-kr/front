@@ -52,3 +52,11 @@ document.addEventListener("click", (e) => {
         });
     }
 });
+
+const dropdownItems = document.querySelectorAll(".category-body-input-wrap");
+
+dropdownItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+        item.classList.toggle("active");
+    });
+});
