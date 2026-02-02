@@ -894,7 +894,6 @@ progress {
 .category-row > div {
     flex: 1;
     min-width: 0;
-    max-width: calc(50% - 10px);
 }
 
 .category-row .custom-select-container {
