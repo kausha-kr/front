@@ -5,27 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지</title>
-    <link rel="stylesheet" href="../../static/css/common/font.css">
-    <link rel="stylesheet" href="../../static/css/mypage/mypage.css">
-    <script src="../../static/js/mypage/logo-carousel.js" defer></script>
-    <script src="../../static/js/mypage/tab-switch.js" defer></script>
-    <script src="../../static/js/mypage/mypage.js" defer></script>
+    <link rel="stylesheet" href="../../../static/css/common/font.css">
+    <link rel="stylesheet" href="../../../static/css/mypage/mypage.css">
+    <script src="../../../static/js/mypage/logo-carousel.js" defer></script>
+    <script src="../../../static/js/mypage/tab-switch.js" defer></script>
+    <script src="../../../static/js/mypage/mypage.js" defer></script>
 </head>
 
 <body>
     <div class="wrap">
         <div class="bg-wrap">
             <div class="bg-img-wrap">
-                <input type="file" class="img-file">
+                <!-- 본인만 보이는 배경 편집 버튼 -->
+                <input type="file" class="img-file" id="owner-bg-input">
                 <div class="bg-img">
                     <img src="https://www.rocketpunch.com/banner.jpg" alt="user-bg-img" class="user-bg-img">
-                    <div class="bg-button-wrap">
-                        <div class="bg-button-inner">
-                            <button type="button" class="bg-button">
-                                <span class="bg-button-word">배경 이미지 편집</span>
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -35,7 +29,8 @@
                     <div class="user-profile-div">
                         <div class="user-nickname-wrap">
                             <div class="user-profile-img-wrap">
-                                <input type="file" class="profile-file">
+                                <!-- 본인만 보이는 프로필 편집 input -->
+                                <input type="file" class="profile-file" id="owner-profile-input">
                                 <div class="user-profile">
                                     <img src="https://i.pravatar.cc/150?img=12" alt="profile-img" class="pro-img">
                                 </div>
@@ -75,12 +70,22 @@
                                 <p class="user-status-count">0</p>
                             </div>
                         </div>
-                        <div class="user-profile-edit-wrap">
+                        <!-- 본인일 때 보이는 버튼 -->
+                        <div class="user-profile-edit-wrap" id="owner-profile-buttons">
                             <button type="button" class="user-prorfile-edit-button">
                                 <span class="user-profile-edit-word">프로필 편집</span>
                             </button>
                             <button type="button" class="user-prorfile-edit-button">
                                 <span class="user-profile-edit-word">프로필 공유</span>
+                            </button>
+                        </div>
+                        <!-- 타인일 때 보이는 버튼 -->
+                        <div class="user-profile-edit-wrap" id="visitor-profile-buttons">
+                            <button type="button" class="user-prorfile-edit-button" id="follow-button">
+                                <span class="user-profile-edit-word">팔로우</span>
+                            </button>
+                            <button type="button" class="user-prorfile-edit-button">
+                                <span class="user-profile-edit-word">메세지 보내기</span>
                             </button>
                         </div>
                     </div>
@@ -91,10 +96,12 @@
                             <p class="user-profile-tab-carrer-word">커리어</p>
                         </div>
                         <div class="user-profile-tab-mypost">
-                            <p class="user-profile-tab-mypost-word">내 게시물</p>
+                            <!-- 본인: "내 게시물", 타인: "게시물" -->
+                            <p class="user-profile-tab-mypost-word" id="tab-posts-text">내 게시물</p>
                         </div>
                         <div class="user-profile-tab-save-wrap">
-                            <p class="user-profile-tab-mypost-word">관심 펀딩목록</p>
+                            <!-- 본인: "관심 펀딩목록", 타인: "관심 팀목록" -->
+                            <p class="user-profile-tab-mypost-word" id="tab-interest-text">팔로워</p>
                         </div>
                     </div>
                 </div>
@@ -374,6 +381,138 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Follower Section for "팔로워" Tab -->
+                    <div class="follower-list-section" id="follower-list-section" data-tab="followers"
+                        style="display: none;">
+                        <div class="follower-list-header">
+                            <div class="follower-list-title">
+                                <p class="follower-title-text">관련 사람 4명</p>
+                            </div>
+                            <div class="follower-search-wrap">
+                                <svg aria-label="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M21 21l-5.2-5.2"></path>
+                                    <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none" stroke-width="2">
+                                    </circle>
+                                </svg>
+                                <input type="text" placeholder="이름, 직명명 검색" class="follower-search-input">
+                            </div>
+                        </div>
+                        <div class="follower-tabs">
+                            <button class="follower-tab active">기업 ·</button>
+                            <button class="follower-tab">개설 ·</button>
+                            <button class="follower-tab">제품 공고 ·</button>
+                            <button class="follower-tab">사람 찾기</button>
+                        </div>
+                        <div class="follower-list-content">
+                            <!-- 팔로워 아이템 1 -->
+                            <div class="follower-item">
+                                <div class="follower-item-avatar">
+                                    <img src="https://i.pravatar.cc/150?img=33" alt="김에디">
+                                </div>
+                                <div class="follower-item-info">
+                                    <div class="follower-item-name">
+                                        <p class="follower-name">김에디</p>
+                                    </div>
+                                    <div class="follower-item-job">
+                                        <p class="follower-job">브랜드 디자이너</p>
+                                    </div>
+                                    <div class="follower-item-period">
+                                        <p class="follower-period">2023년 05월 - 2023년 11월 · 6개월</p>
+                                    </div>
+                                </div>
+                                <button class="follower-item-follow-btn">팔로우</button>
+                            </div>
+
+                            <!-- 팔로워 아이템 2 -->
+                            <div class="follower-item">
+                                <div class="follower-item-avatar">
+                                    <img src="https://i.pravatar.cc/150?img=12" alt="이지오">
+                                </div>
+                                <div class="follower-item-info">
+                                    <div class="follower-item-name">
+                                        <p class="follower-name">이지오</p>
+                                    </div>
+                                    <div class="follower-item-job">
+                                        <p class="follower-job">디자틀 마케터</p>
+                                    </div>
+                                </div>
+                                <button class="follower-item-follow-btn">팔로우</button>
+                            </div>
+
+                            <!-- 팔로워 아이템 3 -->
+                            <div class="follower-item">
+                                <div class="follower-item-avatar">
+                                    <img src="https://i.pravatar.cc/150?img=58" alt="장진호">
+                                </div>
+                                <div class="follower-item-info">
+                                    <div class="follower-item-name">
+                                        <p class="follower-name">장진호</p>
+                                    </div>
+                                    <div class="follower-item-job">
+                                        <p class="follower-job">Founder/CEO</p>
+                                    </div>
+                                    <div class="follower-item-period">
+                                        <p class="follower-period">2020년 11월 - 현재 · 5년 3개월</p>
+                                    </div>
+                                </div>
+                                <button class="follower-item-follow-btn">팔로우</button>
+                            </div>
+
+                            <!-- 팔로워 아이템 4 -->
+                            <div class="follower-item">
+                                <div class="follower-item-avatar">
+                                    <img src="https://i.pravatar.cc/150?img=14" alt="조성민">
+                                </div>
+                                <div class="follower-item-info">
+                                    <div class="follower-item-name">
+                                        <p class="follower-name">조성민</p>
+                                    </div>
+                                    <div class="follower-item-job">
+                                        <p class="follower-job">iOS Developer</p>
+                                    </div>
+                                    <div class="follower-item-period">
+                                        <p class="follower-period">2024년 03월 - 2024년 06월 · 3개월</p>
+                                    </div>
+                                </div>
+                                <button class="follower-item-follow-btn">팔로우</button>
+                            </div>
+
+                            <!-- 팔로워 아이템 5 -->
+                            <div class="follower-item">
+                                <div class="follower-item-avatar">
+                                    <img src="https://i.pravatar.cc/150?img=27" alt="최문교">
+                                </div>
+                                <div class="follower-item-info">
+                                    <div class="follower-item-name">
+                                        <p class="follower-name">최문교</p>
+                                    </div>
+                                    <div class="follower-item-job">
+                                        <p class="follower-job">브랜드 프랜차이즈 사업</p>
+                                    </div>
+                                    <div class="follower-item-period">
+                                        <p class="follower-period">2024년 06월 - 2025년 02월 · 6개월</p>
+                                    </div>
+                                </div>
+                                <button class="follower-item-follow-btn">팔로우</button>
+                            </div>
+
+                            <!-- 팔로워 아이템 6 -->
+                            <div class="follower-item">
+                                <div class="follower-item-avatar">
+                                    <img src="https://i.pravatar.cc/150?img=41" alt="키탈기냥">
+                                </div>
+                                <div class="follower-item-info">
+                                    <div class="follower-item-name">
+                                        <p class="follower-name">키탈기냥</p>
+                                    </div>
+                                    <div class="follower-item-job">
+                                        <p class="follower-job">Administrator</p>
+                                    </div>
+                                </div>
+                                <button class="follower-item-follow-btn">팔로우</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="right-wrap">
@@ -427,7 +566,7 @@
                 </div>
                 <div class="ad-wrap">
                     <div class="ad-wrap-inner">
-                        <img class="ad-img" src="../../static/image/ad-img.webp" alt="식당에서 결제할 때마다 15% 캐시백 받으세요.">
+                        <img class="ad-img" src="../../../static/image/ad-img.webp" alt="식당에서 결제할 때마다 15% 캐시백 받으세요.">
                         <div class="img-logo">
                             <img class="ad-lmg-logo"
                                 src="https://image.rocketpunch.com/ad_logo/2026/01/08/c043f17f-7763-4bcb-a8e5-89408366a7db.svg"
@@ -938,11 +1077,11 @@
             </div>
         </div>
     </div>
-<svg style="display: none;">
+
+<svg>
 <symbol id="close-outline" viewBox="0 0 24 24"><path d="M17.435 5.435a.8.8 0 1 1 1.13 1.13L13.131 12l5.434 5.435a.8.8 0 1 1-1.13 1.13L12 13.131l-5.435 5.434a.8.8 0 1 1-1.13-1.13L10.869 12 5.435 6.565a.8.8 0 1 1 1.13-1.13L12 10.869z"></path></symbol>
-</svg> -->
-    <!-- event handler -->
-    <script src="../../static/js/mypage/event.js"></script>
+</svg>
+    <script src="../../../static/js/mypage/event.js"></script>
 </body>
 
 </html>
