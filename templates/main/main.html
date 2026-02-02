@@ -317,12 +317,90 @@
                     <div class="header-text">
                         <p class="header-text-content">홈</p>
                     </div>
-                    <!-- 알림(모달) 부분 새로 따올거임 -->
-                    <div class="login-icon2-modal">
-                        <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24"
-                            role="img" width="24">
-                            <use href="#bell-outline"></use>
-                        </svg>
+                    <!-- 알림(모달) 부분 -->
+                    <div class="notification-wrapper">
+                        <button class="notification-bell-button" id="notification-bell">
+                            <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24"
+                                role="img" width="24">
+                                <use href="#bell-outline"></use>
+                            </svg>
+                        </button>
+
+                        <!-- 알람 모달 -->
+                        <div class="notification-modal" id="notification-modal">
+                            <div class="notification-modal-header">
+                                <div class="notification-modal-title">
+                                    <h3>알림</h3>
+                                </div>
+                                <button class="notification-clear-all" id="clear-all-notifications">
+                                    <span>모두 지우기</span>
+                                </button>
+                            </div>
+                            <div class="notification-modal-content">
+                                <!-- 알림 아이템들 -->
+                                <div class="notification-item">
+                                    <div class="notification-item-avatar">
+                                        <img src="https://i.pravatar.cc/150?img=33" alt="Steve Jobs">
+                                    </div>
+                                    <div class="notification-item-content">
+                                        <div class="notification-item-text">
+                                            <p><strong>Steve Jobs</strong>님이 회원님의 게시물에 좋아요를 눌렀습니다.</p>
+                                        </div>
+                                        <div class="notification-item-time">
+                                            <span>2시간 전</span>
+                                        </div>
+                                    </div>
+                                    <button class="notification-item-delete">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M17.435 5.435a.8.8 0 1 1 1.13 1.13L13.131 12l5.434 5.435a.8.8 0 1 1-1.13 1.13L12 13.131l-5.435 5.434a.8.8 0 1 1-1.13-1.13L10.869 12 5.435 6.565a.8.8 0 1 1 1.13-1.13L12 10.869z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="notification-item">
+                                    <div class="notification-item-avatar">
+                                        <img src="https://i.pravatar.cc/150?img=12" alt="Elon Musk">
+                                    </div>
+                                    <div class="notification-item-content">
+                                        <div class="notification-item-text">
+                                            <p><strong>Elon Musk</strong>님이 회원님을 팔로우하기 시작했습니다.</p>
+                                        </div>
+                                        <div class="notification-item-time">
+                                            <span>5시간 전</span>
+                                        </div>
+                                    </div>
+                                    <button class="notification-item-delete">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M17.435 5.435a.8.8 0 1 1 1.13 1.13L13.131 12l5.434 5.435a.8.8 0 1 1-1.13 1.13L12 13.131l-5.435 5.434a.8.8 0 1 1-1.13-1.13L10.869 12 5.435 6.565a.8.8 0 1 1 1.13-1.13L12 10.869z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="notification-item">
+                                    <div class="notification-item-avatar">
+                                        <img src="https://i.pravatar.cc/150?img=58" alt="Bill Gates">
+                                    </div>
+                                    <div class="notification-item-content">
+                                        <div class="notification-item-text">
+                                            <p><strong>Bill Gates</strong>님이 회원님의 게시물에 댓글을 남겼습니다: "훌륭한 인사이트입니다!"</p>
+                                        </div>
+                                        <div class="notification-item-time">
+                                            <span>1일 전</span>
+                                        </div>
+                                    </div>
+                                    <button class="notification-item-delete">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M17.435 5.435a.8.8 0 1 1 1.13 1.13L13.131 12l5.434 5.435a.8.8 0 1 1-1.13 1.13L12 13.131l-5.435 5.434a.8.8 0 1 1-1.13-1.13L10.869 12 5.435 6.565a.8.8 0 1 1 1.13-1.13L12 10.869z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <!-- 알림이 없을 때 -->
+                                <div class="notification-empty" style="display: none;">
+                                    <p>새로운 알림이 없습니다.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- 로그인 후 -->
                     <div class="login-icon2">
@@ -653,6 +731,47 @@
                                     </button>
                                 </div>
 
+                                <!-- 프로필 UI (권한에 따라 서버에서 표시/숨김 처리) -->
+                                <div class="profile-user-section" id="user-profile-section">
+                                    <div class="profile-user-wrapper">
+                                        <a href="/@elonmusk">
+                                            <div class="profile-user-card">
+                                                <div class="profile-user-avatar">
+                                                    <img src="https://i.pravatar.cc/150?img=12"
+                                                         alt="Elon Musk"
+                                                         class="profile-avatar-img">
+                                                </div>
+                                                <div class="profile-user-info">
+                                                    <div class="profile-user-name">
+                                                        <p class="profile-username">Elon Musk</p>
+                                                    </div>
+                                                    <div class="profile-user-role">
+                                                        <p class="profile-role-text">CEO at Tesla & SpaceX</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="profile-user-stats">
+                                            <div class="profile-stat-item">
+                                                <p class="profile-stat-label">0 게시물</p>
+                                            </div>
+                                            <div class="profile-stat-item">
+                                                <p class="profile-stat-label">0 팔로워</p>
+                                            </div>
+                                            <div class="profile-stat-item">
+                                                <p class="profile-stat-label">0 팔로잉</p>
+                                            </div>
+                                        </div>
+                                        <div class="profile-user-actions">
+                                            <button class="profile-action-button" type="button">
+                                                <span class="profile-action-text">글쓰기</span>
+                                            </button>
+                                            <button class="profile-action-button profile-action-secondary" type="button">
+                                                <span class="profile-action-text">내 프로필</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <!-- 로그인 후 -->
                                 <!-- <div class="profile-text"> -->
