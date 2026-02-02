@@ -1850,8 +1850,7 @@ a {
     align-self: stretch;
     flex-direction: column;
     align-items: center;
-    /* background: var(--colors-backgrounds-canvas-intense); */
-    background-color: #000;
+    background: var(--colors-backgrounds-canvas-intense);
     min-width: 480px;
     border-radius: var(--radii-main-content-body);
     flex: 1 0 0;
@@ -1862,14 +1861,12 @@ a {
 
 .header {
     top: var(--spacing-0);
-    /* border-color: var(--colors-strokes-separator-standard)!important; */
-    border-color: gray !important;
+    border-color: var(--colors-strokes-separator-standard)!important;
     flex-direction: column;
     align-items: center;
     z-index: 900;
     border-radius: 12px 12px 0 0;
-    /* background: var(--colors-backgrounds-canvas-intense); */
-    background-color: #000;
+    background: var(--colors-backgrounds-canvas-intense);
     position: sticky;
     border-bottom: 1px solid;
     width: 100%;
@@ -1922,8 +1919,7 @@ a {
 
 
 .header-text-content {
-    /* color: var(--colors-foregrounds-neutral-primary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-primary);
     letter-spacing: -.26px;
     font-family: var(--texts--fonts--body);
     font-size: var(--texts--font-size--body-m);
@@ -1935,9 +1931,6 @@ a {
     align-items: center;
     gap: 12px;
     display: flex;
-}
-.login-icon2-modal {
-    color: white;
 }
 /* 로그인 후 */
 .park {
@@ -2132,7 +2125,7 @@ a {
     align-items: center;
     border-radius: var(--radii-main-content-body);
     flex: 1 0 0;
-    /* background: var(--colors-backgrounds-overlay-standard); */
+    background: var(--colors-backgrounds-overlay-standard);
     width: 100%;
     height: 100%;
     display: flex;
@@ -2179,7 +2172,7 @@ a {
 }
 .name-icon1-in {
     align-items: center;
-    cursor: default;
+    cursor: default
     transition: transform .15s cubic-bezier(.68, -.55, .265, 1.55);
     position: relative;
     display: flex;
@@ -2241,8 +2234,7 @@ a {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
-    /* color: var(--colors-foregrounds-neutral-primary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-primary);
     letter-spacing: -.3px;
     font-family: var(--texts--fonts--body);
     font-size: var(--texts--font-size--body-l);
@@ -2255,8 +2247,7 @@ a {
     display: flex;
 }
 .p {
-    /* color: var(--colors-foregrounds-neutral-tertiary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-tertiary);
     font-family: var(--texts--fonts--body);
     font-weight: var(--texts--font-weight--body);
     letter-spacing: -.26px;
@@ -2339,8 +2330,7 @@ a {
 
 .span {
     white-space: pre-line;
-    /* color: var(--colors-foregrounds-neutral-primary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-primary);
     font-size: var(--texts--font-size--textual-l);
     line-height: var(--texts--line-heights--textual-l);
     letter-spacing: 0;
@@ -2442,7 +2432,7 @@ a {
     align-items: flex-start;
     flex-direction: column;
     border-radius: var(--radii-main-content-body);
-    /* background: var(--colors-backgrounds-overlay-standard); */
+    background: var(--colors-backgrounds-overlay-standard);
     width: 100%;
     display: flex;
 }
@@ -2463,8 +2453,7 @@ a {
 }
 .profile-text-in-first {
     white-space: pre-line;
-    /* color: var(--colors-foregrounds-neutral-primary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-primary);
     letter-spacing: -.48px;
     font-family: var(--texts--fonts--display);
     font-size: var(--texts--font-size--display-s);
@@ -2474,8 +2463,7 @@ a {
 
 .profile-text-in-second {
     white-space: pre-line;
-    /* color: var(--colors-foregrounds-neutral-secondary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-secondary);
     font-family: var(--texts--fonts--body);
     font-weight: var(--texts--font-weight--body);
     letter-spacing: -.26px;
@@ -2494,8 +2482,7 @@ a {
 
 .profile-login-button {
     backdrop-filter: none;
-    /* background-color: var(--colors-backgrounds-surface-inverted); */
-    background-color: rgb(50, 47, 47);
+    background-color: var(--colors-backgrounds-surface-inverted);
     justify-content: center;
     align-items: center;
     padding: 14px;
@@ -2528,7 +2515,7 @@ a {
     align-items: flex-start;
     flex-direction: column;
     border-radius: var(--radii-main-content-body);
-    /* background: var(--colors-backgrounds-overlay-standard); */
+    background: var(--colors-backgrounds-overlay-standard);
     width: 100%;
     display: flex;
 }
@@ -2569,8 +2556,7 @@ a {
 
 .popular-text-content-in {
     user-select: none;
-    /* color: var(--colors-foregrounds-neutral-primary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-primary);
     letter-spacing: -.36px;
     font-family: var(--texts--fonts--title);
     font-size: var(--texts--font-size--title-s);
@@ -2656,8 +2642,7 @@ a {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
-    /* color: var(--colors-foregrounds-neutral-secondary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-secondary);
     letter-spacing: -.24px;
     font-family: var(--texts--fonts--body);
     font-size: var(--texts--font-size--body-s);
@@ -2665,8 +2650,7 @@ a {
     line-height: var(--texts--line-heights--body-s);
 }
 .text-content2 {
-    /* color: var(--colors-foregrounds-neutral-primary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-primary);
     letter-spacing: -.26px;
     font-family: var(--texts--fonts--body);
     font-size: var(--texts--font-size--body-m);
@@ -2678,8 +2662,7 @@ a {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
-    /* color: var(--colors-foregrounds-neutral-secondary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-secondary);
     letter-spacing: -.24px;
     font-family: var(--texts--fonts--body);
     font-size: var(--texts--font-size--body-s);
@@ -2734,8 +2717,7 @@ a {
 .left-text, .right-text {
     user-select: none;
     white-space: nowrap;
-    /* color: var(--colors-foregrounds-neutral-primary); */
-    color: white;
+    color: var(--colors-foregrounds-neutral-primary);
 }
 
 .more {
@@ -2749,8 +2731,7 @@ a {
 
 .more-button {
     backdrop-filter: blur(calc(var(--blurs-standard) / 2));
-    /* background-color: var(--colors-backgrounds-surface-intense); */
-    background-color: rgb(50, 47, 47);
+    background-color: var(--colors-backgrounds-surface-intense);
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -2766,7 +2747,6 @@ a {
 
 
 .more-button-text {
-    color: white;
     justify-content: center;
     align-items: center;
     padding-inline: 6px;
@@ -2968,64 +2948,4 @@ a {
     letter-spacing: -.26px;
     font-size: var(--texts--font-size--body-m);
     line-height: var(--texts--line-heights--body-m);
-}
-
-/* Sidebar Dark Mode Override */
-.side-bar {
-    background-color: #000 !important;
-}
-
-.side-bar .logo-center {
-    background-color: #000 !important;
-}
-
-.side-bar .logo-center-text {
-    color: #fff !important;
-}
-
-.side-bar .home,
-.side-bar .event-text,
-.side-bar .employ,
-.side-bar .education,
-.side-bar .message-box,
-.side-bar .hub,
-.side-bar .option-service-text,
-.side-bar .company-service-text,
-.side-bar .help-service-text,
-.side-bar .user-login {
-    color: #fff !important;
-}
-
-.side-bar .news,
-.side-bar .event-conference-text,
-.side-bar .new-chance,
-.side-bar .boot,
-.side-bar .sosic,
-.side-bar .moa {
-    color: #9ca3af !important;
-}
-
-/* Icons relative to sidebar */
-.side-bar-category .first-part-icon,
-.side-bar-category .second-part-icon,
-.side-bar-category .third-part-icon,
-.side-bar-category .fourth-part-icon,
-.side-bar-category .fifth-part-icon,
-.side-bar-category .sixth-part-icon {
-    background-color: #333 !important;
-    color: #fff !important;
-}
-
-/* Search box */
-.side-bar .serch {
-    background-color: #1a1a1a !important;
-    border: 1px solid #333 !important;
-}
-
-/* Footer text */
-.side-bar .footer .bon-service-text,
-.side-bar .footer .two-five-text,
-.side-bar .footer .saupja-text-content,
-.side-bar .footer .fold-service {
-    color: #6b7280 !important;
 }
